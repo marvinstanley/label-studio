@@ -106,7 +106,7 @@ def iter_files(root_dir, ext):
 
 def json_load(file, int_keys=False):
     with io.open(file) as f:
-        data = json.load(f)
+        data = json.load(f , encoding='iso-8859-1')
         if int_keys:
             return {int(k): v for k, v in data.items()}
         else:
